@@ -17,10 +17,12 @@ with open('input.txt') as f:
    		y-=1
    			
    	spot = (x,y)
-   	visited.append(spot)
+   	if spot not in visited:
+   		visited.append(spot)
 	if not c:
 		print visited
-		print len(visited)
+		#added one to account for starting on 0,0
+		print len(visited)+1
 		break
 	print spot, c
 
